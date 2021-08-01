@@ -1,0 +1,131 @@
+*{
+    margin: 0;padding: 0; box-sizing: border-box;
+}
+body{
+    background-color: rgb(1, 1, 56);
+    width: 100%;
+    max-height: 100vh;
+}
+.todo-conatiner{
+    width: 40%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top:5rem;
+    text-align: center;
+}
+.todo-conatiner h3{
+    color: white;
+}
+.todo-conatiner img{
+    width: 10%;
+    height: auto;
+}
+.todo-conatiner input{
+    min-width: 50%;
+    padding: 0.3rem;
+    border: none;
+    font-size: 1rem;
+    color: grey;
+    margin:1rem 0;
+    font-weight: 600;
+}
+.todo-conatiner input:active ,input:focus{
+    outline: none;
+}
+.add-btn{
+    margin-left: -1.5rem;
+    color: grey;
+    cursor: pointer;
+}
+.check-btn{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+position: relative;
+border: none;
+background: white;
+font-weight: 600;
+position: relative;
+color: rgb(85, 85, 85);
+transition: 0.7s all ease-out;
+}
+.check-btn:hover, .check-btn:focus{
+    box-shadow: inset 0px -60px 0px -10px red;
+    outline: none;
+    color: white;
+}
+.todo-items{
+    width:50%;
+    height: 5vh;
+    background-color: rgb(25, 0, 255);
+    position: relative;
+    left: 8.8rem;
+    display: flex;
+    margin: 0.5rem 0;
+}
+.todo-items h4{
+    color: rgb(247, 247, 247);
+    padding:0.3rem 0 0 0.5rem;
+}
+.todo-btn{
+    position: absolute;
+    right: 0.5rem;
+}
+.todo-btn i{
+    padding: 0.5rem 0.5rem 0 0;
+    cursor: pointer;
+    color: white;
+}
+.edit:hover{
+color: rgb(0, 255, 0);
+}
+.del:hover{
+    color: rgb(255, 13, 13);
+}
+
+/* *****************mobile device */
+@media screen and (max-width:480px) {
+    body{
+        font-size: 1rem;
+    }
+    .todo-conatiner{
+        width: 90%;
+        top: 3rem;
+    }
+    .todo-conatiner img{
+        width: 20%;
+    }
+    .todo-conatiner input{
+        min-width: 85%;
+        padding: 0.4rem 0;
+        
+    }
+    .todo-items{
+        width:86%;
+        left: 1.8rem;
+    }
+}
+@media (min-width:768px) and (max-width:1024px){
+   body {
+  font-size: 1rem;
+    }
+    .todo-conatiner{
+        width: 70%;
+        top: 5rem;
+    }
+    .todo-conatiner img{
+        width: 20%;
+    }
+    .todo-conatiner input{
+        min-width: 85%;
+        padding: 0.5rem 0;
+    }
+    .todo-items{
+        width:86%;
+        left: 3.5rem;
+        height: 3vh;
+    }
+}
