@@ -1,131 +1,116 @@
-*{
-    margin: 0;padding: 0; box-sizing: border-box;
-}
-body{
-    background-color: rgb(1, 1, 56);
+.main_div{
     width: 100%;
-    max-height: 100vh;
+    height: 100vh;
+    background: -webkit-linear-gradient(69deg, #00fed8 0%, #02447e 100%);
+    background: linear-gradient(69deg, #00fed8 0%, #02447e 100%);
 }
-.todo-conatiner{
-    width: 40%;
-    height: auto;
-    margin: auto;
-    position: relative;
-    top:5rem;
+.todo_div{
+    width: 50%;
     text-align: center;
+    margin: 0 auto;
 }
-.todo-conatiner h3{
-    color: white;
+.todo_div h1{
+padding: 2rem 0;
+color: white;
+font-family: cursive;
 }
-.todo-conatiner img{
-    width: 10%;
-    height: auto;
-}
-.todo-conatiner input{
-    min-width: 50%;
-    padding: 0.3rem;
-    border: none;
-    font-size: 1rem;
-    color: grey;
-    margin:1rem 0;
-    font-weight: 600;
-}
-.todo-conatiner input:active ,input:focus{
-    outline: none;
-}
-.add-btn{
-    margin-left: -1.5rem;
-    color: grey;
-    cursor: pointer;
-}
-.check-btn{
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    margin: 1rem 0;
-    cursor: pointer;
-position: relative;
-border: none;
-background: white;
-font-weight: 600;
-position: relative;
-color: rgb(85, 85, 85);
-transition: 0.7s all ease-out;
-}
-.check-btn:hover, .check-btn:focus{
-    box-shadow: inset 0px -60px 0px -10px red;
-    outline: none;
-    color: white;
-}
-.todo-items{
-    width:50%;
-    height: 5vh;
-    background-color: rgb(25, 0, 255);
+.input_div{
+    width: 25rem;
     position: relative;
-    left: 8.8rem;
-    display: flex;
-    margin: 0.5rem 0;
+    margin: auto;
 }
-.todo-items h4{
-    color: rgb(247, 247, 247);
-    padding:0.3rem 0 0 0.5rem;
+.input_div input{
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.429);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.795);
 }
-.todo-btn{
+.input_div #add{
     position: absolute;
-    right: 0.5rem;
-}
-.todo-btn i{
-    padding: 0.5rem 0.5rem 0 0;
+    right: 10px; top: 12px;
+    font-size: large;
     cursor: pointer;
+    z-index: 1;
+}
+.input_div input:focus{
+    outline: none;
+}
+.list_div{
+    width: 32rem;
+    position: relative;
+    margin:2rem auto;
+    padding: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+.item_list{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.795);
+}
+.list_action{
+    position: absolute;
+    right: 10px; top: 0.8rem;
+    display: flex;
+    font-size: large;
+    align-items: center;
+    gap: 8px; cursor: pointer;
+    z-index: 1;
+}
+.list_action #edit, .list_action #delete{
+transition: 0.3s;
+}
+.list_action #edit:hover{
+    color: rgb(0, 155, 0);
+    transform: scale(1.1);
+}
+.list_action #delete:hover{
+color: red;
+transform: scale(1.1);
+}
+.isedit{
+    color: green;
+}
+#clear_btn{
+    /* border: 1.5px solid rgb(255, 255, 255); */
+    background-color: tomato;
+    width: 8rem;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.795);
+    transition: 0.5s;
+}
+#clear_btn:hover{
+    transform: scale(1.1);
+    background-color: rgb(255, 38, 0);
     color: white;
 }
-.edit:hover{
-color: rgb(0, 255, 0);
-}
-.del:hover{
-    color: rgb(255, 13, 13);
-}
-
-/* *****************mobile device */
-@media screen and (max-width:480px) {
-    body{
-        font-size: 1rem;
+@media screen and (max-width:640px) {
+    .todo_div{
+        width: 100%;
+        padding: 1rem;
     }
-    .todo-conatiner{
-        width: 90%;
-        top: 3rem;
+    .input_div{
+        width: 100%;
     }
-    .todo-conatiner img{
-        width: 20%;
-    }
-    .todo-conatiner input{
-        min-width: 85%;
-        padding: 0.4rem 0;
-        
-    }
-    .todo-items{
-        width:86%;
-        left: 1.8rem;
-    }
-}
-@media (min-width:768px) and (max-width:1024px){
-   body {
-  font-size: 1rem;
-    }
-    .todo-conatiner{
-        width: 70%;
-        top: 5rem;
-    }
-    .todo-conatiner img{
-        width: 20%;
-    }
-    .todo-conatiner input{
-        min-width: 85%;
-        padding: 0.5rem 0;
-    }
-    .todo-items{
-        width:86%;
-        left: 3.5rem;
-        height: 3vh;
+    .list_div{
+        width: 100%;
+        position: relative;
+        margin:2rem auto;
+        padding: 10px;
+        height: auto;
     }
 }
